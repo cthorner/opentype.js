@@ -6572,7 +6572,6 @@
 
 	function makePostTable(postTable) {
 	    var ref = postTable || {};
-	    var version = ref.version; if ( version === void 0 ) version = 0x00030000;
 	    var italicAngle = ref.italicAngle; if ( italicAngle === void 0 ) italicAngle = 0;
 	    var underlinePosition = ref.underlinePosition; if ( underlinePosition === void 0 ) underlinePosition = 0;
 	    var underlineThickness = ref.underlineThickness; if ( underlineThickness === void 0 ) underlineThickness = 0;
@@ -6582,7 +6581,7 @@
 	    var minMemType1 = ref.minMemType1; if ( minMemType1 === void 0 ) minMemType1 = 0;
 	    var maxMemType1 = ref.maxMemType1; if ( maxMemType1 === void 0 ) maxMemType1 = 0;
 	    return new table.Table('post', [
-	      { name: 'version', type: 'FIXED', value: version },
+	      { name: 'version', type: 'FIXED', value: 0x00030000 },
 	      { name: 'italicAngle', type: 'FIXED', value: italicAngle },
 	      { name: 'underlinePosition', type: 'FWORD', value: underlinePosition },
 	      { name: 'underlineThickness', type: 'FWORD', value: underlineThickness },

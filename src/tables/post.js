@@ -52,7 +52,7 @@ function parsePostTable(data, start) {
 
 function makePostTable(postTable) {
     const {
-      version = 0x00030000,
+      // version = 0x00030000,
       italicAngle = 0,
       underlinePosition = 0,
       underlineThickness = 0,
@@ -63,7 +63,7 @@ function makePostTable(postTable) {
       maxMemType1 = 0
     } = postTable || {};
     return new table.Table('post', [
-      { name: 'version', type: 'FIXED', value: version },
+      { name: 'version', type: 'FIXED', value: 0x00030000 },
       { name: 'italicAngle', type: 'FIXED', value: italicAngle },
       { name: 'underlinePosition', type: 'FWORD', value: underlinePosition },
       { name: 'underlineThickness', type: 'FWORD', value: underlineThickness },
